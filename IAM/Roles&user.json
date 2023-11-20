@@ -1,0 +1,17 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "A sample template",
+	"Resources": {
+        "Role1": {
+            "Type" : "AWS::IAM::Role",
+            "Properties" : {
+                "ManagedPolicyArns": [
+                    "arn:aws:iam::aws:policy/ReadOnlyAccess",
+                    "arn:aws:iam::aws:policy/IAMUserChangePassword"
+                ]
+            },
+            "Path": "/"
+            
+        }    
+    }
+}

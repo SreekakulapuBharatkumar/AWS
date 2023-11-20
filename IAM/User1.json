@@ -1,0 +1,21 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "A sample template",
+	"Resources": {
+		"User1": {
+            "Type" : "AWS::IAM::User",
+            "Properties" : {
+                "UserName" : "Naresh",
+                "Path": "/",
+                "LoginProfile": {
+                    "Password" : "Bharat123",
+                    "PasswordResetRequired" : true
+                },
+                "ManagedPolicyArns": [
+                    "arn:aws:iam::aws:policy/ReadOnlyAccess",
+                    "arn:aws:iam::aws:policy/IAMUserChangePassword"
+                ]
+            }
+        }
+    }
+}
